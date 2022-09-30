@@ -59,6 +59,7 @@
   border-radius: 10px;
   background-color: #fff;
   justify-content: space-around;
+  z-index: 999;
 }
 
 .label {
@@ -72,9 +73,10 @@
   font-size: 20px;
 }
 
-#map {
-  height: 180px;
-  background-color: red;
+.leaflet-container {
+  width: 100%;
+  height: 70vh;
+  outline: 2px solid red;
 }
 
 @media (max-width: 600px) {

@@ -12,7 +12,7 @@ const SearchBar = () => {
           className="input"
         />
         <span className="submit-form-btn" style={{ backgroundColor: "#000" }}>
-          <img src={arrowIcon} />
+          <img src={arrowIcon} alt="arrow-icon" />
         </span>
       </div>
     </div>
