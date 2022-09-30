@@ -5,3 +5,83 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.search-container {
+  width: 100%;
+  height: 250px;
+  background-image: url("./images/pattern-bg.png");
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  gap: 20px;
+}
+
+.title {
+  color: #fff;
+}
+
+.input-container {
+  display: flex;
+  width: 85%;
+  max-width: 350px;
+}
+
+.input {
+  padding: 10px;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  width: 100%;
+}
+
+.submit-form-btn {
+  padding-inline: 15px;
+  display: flex;
+  align-items: center;
+  border-radius: 0 8px 8px 0;
+}
+
+.user-data-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.user-data {
+  position: absolute;
+  top: -50px;
+  display: flex;
+  width: 85%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  justify-content: space-around;
+}
+
+.label {
+  text-transform: uppercase;
+  font-size: small;
+}
+
+.data {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+#map {
+  height: 180px;
+  background-color: red;
+}
+
+@media (max-width: 600px) {
+  .user-data {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    top: -100px;
+  }
+}
