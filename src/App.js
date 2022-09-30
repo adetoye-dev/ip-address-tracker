@@ -7,13 +7,13 @@ import Map from "./components/Map";
 const App = () => {
   const [userData, setUserData] = useState({
     ip: "",
-    timezone: "+ 01:00",
-    isp: "MTN NIGERIA",
-    lat: "6.4541",
-    lng: "3.3947",
-    city: "Lagos",
-    country: "NG",
-    postalCode: "100211",
+    timezone: "",
+    isp: "",
+    lat: "",
+    lng: "",
+    city: "",
+    country: "",
+    postalCode: "",
   });
 
   const searchData = (ipAddress) => {

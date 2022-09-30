@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "leaflet/dist/leaflet.css";
 import Leaflet from "leaflet";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
@@ -14,19 +14,17 @@ Leaflet.Icon.Default.mergeOptions({
   shadowUrl: require("leaflet/dist/images/marker-shadow.png"),
 });
 
-const Map = () => {
+const Map = ({ lat, lng }) => {
+  const [position] = useState([lat, lng]);
+
   return (
     <div className="leaflet-container">
-      <MapContainer
-        center={[37.40599, -122.078514]}
-        zoom={12}
-        scrollWheelZoom={false}
-      >
+      <MapContainer center={position} zoom={12} scrollWheelZoom={false}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
-        <Marker position={[37.40599, -122.078514]}>
+        <Marker position={position}>
           <Popup>Brooklyn</Popup>
         </Marker>
       </MapContainer>

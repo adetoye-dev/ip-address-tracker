@@ -1,23 +1,25 @@
 import React from "react";
 
-const UserData = () => {
+const UserData = ({ userData }) => {
   return (
     <div className="user-data">
       <div>
         <label className="label">IP Address</label>
-        <div className="data">192.212.174.101</div>
+        <div className="data">{userData.ip}</div>
       </div>
       <div>
         <label className="label">Location</label>
-        <div className="data">Brooklyn, NY 10001</div>
+        <div className="data">
+          {userData.city}, {userData.country} {userData.postalCode}
+        </div>
       </div>
       <div>
         <label className="label">Timezone</label>
-        <div className="data">UTC - 05:00</div>
+        <div className="data">UTC {userData.timezone}</div>
       </div>
       <div>
         <label className="label">ISP</label>
-        <div className="data">SpaceX Starlink</div>
+        <div className="data">{userData.isp}</div>
       </div>
     </div>
   );
