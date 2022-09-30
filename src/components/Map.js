@@ -1,15 +1,34 @@
 import React from "react";
 import "leaflet/dist/leaflet.css";
+import Leaflet from "leaflet";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import icon from "../images/icon-location.svg";
+
+Leaflet.Icon.Default.imagePath = "../node_modules/leaflet";
+
+delete Leaflet.Icon.Default.prototype._getIconUrl;
+
+Leaflet.Icon.Default.mergeOptions({
+  iconRetinaUrl: icon,
+  iconUrl: icon,
+  shadowUrl: require("leaflet/dist/images/marker-shadow.png"),
+});
 
 const Map = () => {
   return (
     <div className="leaflet-container">
-      <MapContainer center={[45.4, -75.7]} zoom={12} scrollWheelZoom={false}>
+      <MapContainer
+        center={[37.40599, -122.078514]}
+        zoom={12}
+        scrollWheelZoom={false}
+      >
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
+        <Marker position={[37.40599, -122.078514]}>
+          <Popup>Brooklyn</Popup>
+        </Marker>
       </MapContainer>
     </div>
   );
