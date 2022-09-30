@@ -14,8 +14,8 @@ Leaflet.Icon.Default.mergeOptions({
   shadowUrl: require("leaflet/dist/images/marker-shadow.png"),
 });
 
-const Map = ({ lat, lng }) => {
-  const [position] = useState([lat, lng]);
+const Map = ({ userData }) => {
+  const [position] = useState([userData.lat, userData.lng]);
 
   return (
     <div className="leaflet-container">
@@ -25,7 +25,7 @@ const Map = ({ lat, lng }) => {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
         <Marker position={position}>
-          <Popup>Brooklyn</Popup>
+          <Popup>{userData.city}</Popup>
         </Marker>
       </MapContainer>
     </div>

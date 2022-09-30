@@ -43,11 +43,11 @@ const App = () => {
 
   return (
     <main>
-      <SearchBar />
+      <SearchBar searchData={searchData} />
       <div className="user-data-container">
         <UserData userData={userData} />
       </div>
-      <Map lat={userData.lat} lng={userData.lng} />
+      <Map userData={userData} />
     </main>
   );
 };
