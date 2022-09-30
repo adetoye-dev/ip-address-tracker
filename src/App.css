@@ -1,9 +1,18 @@
+:root {
+  --Very-Dark-Gray: hsl(0, 0%, 17%);
+  --Dark-Gray: hsl(0, 0%, 59%);
+}
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
 }
 
 .search-container {
@@ -20,6 +29,7 @@
 
 .title {
   color: #fff;
+  font-weight: 700;
 }
 
 .input-container {
@@ -33,12 +43,15 @@
   border: none;
   border-radius: 8px 0 0 8px;
   width: 100%;
+  cursor: pointer;
 }
 
 .submit-form-btn {
   padding-inline: 15px;
   display: flex;
   align-items: center;
+  cursor: pointer;
+  background-color: var(--Very-Dark-Gray);
   border-radius: 0 8px 8px 0;
 }
 
@@ -65,12 +78,21 @@
 .label {
   text-transform: uppercase;
   font-size: small;
+  color: var(--Dark-Gray);
 }
 
 .data {
   margin-top: 10px;
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.data-container {
+  padding-inline: 20px;
+}
+
+.data-container:not(:last-child) {
+  border-right: 0.5px solid var(--Dark-Gray);
 }
 
 .leaflet-container {
@@ -87,5 +109,8 @@
   }
   .search-container {
     padding-top: 30px;
+  }
+  .data-container:not(:last-child) {
+    border-right: none;
   }
 }

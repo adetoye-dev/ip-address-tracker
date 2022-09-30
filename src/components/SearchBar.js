@@ -14,11 +14,7 @@ const SearchBar = ({ searchData }) => {
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
-        <span
-          className="submit-form-btn"
-          style={{ backgroundColor: "#000" }}
-          onClick={() => searchData(input)}
-        >
+        <span className="submit-form-btn" onClick={() => searchData(input)}>
           <img src={arrowIcon} alt="arrow-icon" />
         </span>
       </div>
