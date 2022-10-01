@@ -47,7 +47,7 @@ const App = () => {
       <div className="user-data-container">
         <UserData userData={userData} />
       </div>
-      <Map userData={userData} />
+      {userData.lat && <Map userData={userData} />}
     </main>
   );
 };
